@@ -7,7 +7,6 @@
 import os
 import pickle
 from typing import Any, Dict, List
-import imblearn
 import numpy as np
 import pandas as pd
 import streamlit as st
