@@ -173,11 +173,7 @@ def validate_input(df: pd.DataFrame) -> pd.DataFrame:
 # 4. Sidebar
 # =============================
 st.sidebar.title("⚙️ Model Settings")
-model_path = st.sidebar.text_input(
-    "Model filename",
-    value="best_pipe_model_.pkl",
-    help="Letakkan file .pkl di folder yang sama dengan file app ini."
-)
+model_path = "best_pipe_model_.pkl"
 
 threshold = st.sidebar.slider(
     "Prediction Threshold",
@@ -463,11 +459,3 @@ else:
             st.error(f"Terjadi error saat memproses file: {e}")
 
 
-# =============================
-# 9. Notes
-# =============================
-st.markdown("---")
-st.caption(
-    "Catatan: Pastikan package yang dipakai saat training model tersedia juga di environment Streamlit, "
-    "misalnya scikit-learn, imbalanced-learn, xgboost, pandas, numpy, dan streamlit."
-)
